@@ -1,8 +1,15 @@
 $mobile-md-width: 640px;
+$tablet-sm-width: 768px;
 $desktop-sm-width: 1140px;
 
 @mixin mobile-md {
   @media (min-width: $mobile-md-width) {
+    @content;
+  }
+}
+
+@mixin tablet-sm {
+  @media (min-width: $tablet-sm-width) {
     @content;
   }
 }

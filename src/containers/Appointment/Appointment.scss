@@ -1,2 +1,34 @@
 .Appointment {
+  h2 {
+    text-transform: uppercase;
+  }
+
+  &_content {
+    display: flex;
+    margin-top: 25px;
+  }
+
+  &_form,
+  &_info {
+    padding: 40px;
+  }
+
+  &_form {
+    width: 70%;
+    background-color: #bffcf1;
+  }
+
+  &_info {
+    width: 30%;
+    background-color: #a0f3e4;
+
+    h3::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      margin: 10px 0;
+      background-color: #3dc2aa;
+    }
+  }
 }

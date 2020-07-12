@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: inherit;
+  line-height: 1.48;
 }
 
 body {
@@ -25,6 +27,16 @@ h1 {
 
 h2 {
   font-weight: 700;
+  font-size: 32px;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+h4 {
+  font-weight: 400;
   font-size: 24px;
 }
 

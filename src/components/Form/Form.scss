@@ -1,0 +1,48 @@
+.Form {
+  display: flex;
+  flex-wrap: wrap;
+
+  &_field {
+    width: calc(50% - 3.5px);
+
+    &[data-type="textarea"] {
+      width: 100%;
+    }
+
+    &:nth-of-type(odd) {
+      margin-right: 7px;
+    }
+
+    &:nth-of-type(n + 3) {
+      margin-top: 15px;
+    }
+  }
+
+  &_label {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 5px;
+  }
+
+  &_input,
+  &_textarea {
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+    padding: 8px 15px;
+  }
+
+  &_textarea {
+    resize: vertical;
+    min-height: 37px;
+  }
+
+  button {
+    margin-top: 25px;
+  }
+}

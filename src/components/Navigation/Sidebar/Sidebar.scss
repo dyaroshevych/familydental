@@ -3,11 +3,12 @@
 .Sidebar {
   position: fixed;
   z-index: 4;
+  display: flex;
+  cursor: pointer;
   top: 0;
   right: 0;
   height: 100%;
-  transform: translateX(calc(100% - 35px));
-  display: flex;
+  transform: translateX(100%);
   transition: transform 0.25s ease;
 
   &[isvisible="true"] {
@@ -19,10 +20,11 @@
   }
 
   &_toggleButton {
+    position: absolute;
+    top: 30px;
+    left: -35px;
     display: block;
-    margin-right: 20px;
     cursor: pointer;
-    transform: translateY(30px);
 
     span {
       display: block;
@@ -39,6 +41,8 @@
 
     &[isopen="true"] {
       span {
+        background-color: #fff;
+
         &:first-of-type {
           transform: translateY(7.5px) rotate(45deg);
         }
@@ -80,7 +84,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   visibility: hidden;
   opacity: 0;
   transition: all 0.25s ease;

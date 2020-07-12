@@ -10,7 +10,7 @@ const Home = () => (
       <span className="Home_heading">
         <h1>family dental</h1>
       </span>
-      <h2>We understand what’s it’s like to go through a dental operation.</h2>
+      <h3>We understand what’s it’s like to go through a dental operation.</h3>
       <Link to="/appointment">
         <Button size="lg" color="white">
           Set appointment

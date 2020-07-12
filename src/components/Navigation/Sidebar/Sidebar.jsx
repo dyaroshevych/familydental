@@ -13,7 +13,11 @@ const Sidebar = () => {
 
   return (
     <>
-      <div className="Backdrop" isvisible={String(visible)}></div>
+      <div
+        className="Backdrop"
+        isvisible={String(visible)}
+        onClick={toggleSidebar}
+      ></div>
       <div className="Sidebar" isvisible={String(visible)}>
         <div>
           <label
@@ -34,7 +38,7 @@ const Sidebar = () => {
             onChange={toggleSidebar}
           />
         </div>
-        <Links className="Sidebar_links" />
+        <Links className="Sidebar_links" click={toggleSidebar} />
       </div>
     </>
   );

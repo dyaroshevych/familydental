@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import Button from "../../Button/Button";
 
@@ -20,7 +20,7 @@ const LINKS = [
   },
 ];
 
-const Links = ({ className }) => {
+const Links = ({ className, click = () => {} }) => {
   const classes = ["Links"];
 
   if (className) {
@@ -36,15 +36,18 @@ const Links = ({ className }) => {
             exact
             className="Links_link"
             activeClassName="Links_link___active"
+            onClick={click}
           >
             {name}
           </NavLink>
         </li>
       ))}
       <li className="Links_item">
-        <Button size="sm" color="green">
-          Appointment
-        </Button>
+        <Link to="/appointment">
+          <Button size="sm" color="green">
+            Appointment
+          </Button>
+        </Link>
       </li>
     </ul>
   );
