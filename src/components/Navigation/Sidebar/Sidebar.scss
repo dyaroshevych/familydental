@@ -1,0 +1,92 @@
+@import "../../../index.scss";
+
+.Sidebar {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  right: 0;
+  height: 100%;
+  transform: translateX(calc(100% - 35px));
+  display: flex;
+  transition: transform 0.25s ease;
+
+  &[isvisible="true"] {
+    transform: translateX(0);
+  }
+
+  @include mobile-md {
+    display: none;
+  }
+
+  &_toggleButton {
+    display: block;
+    margin-right: 20px;
+    cursor: pointer;
+    transform: translateY(30px);
+
+    span {
+      display: block;
+      width: 20px;
+      height: 2.5px;
+      border-radius: 2px;
+      background-color: #000;
+      transition: all 0.25s ease;
+
+      &:not(:last-of-type) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &[isopen="true"] {
+      span {
+        &:first-of-type {
+          transform: translateY(7.5px) rotate(45deg);
+        }
+
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+
+        &:last-of-type {
+          transform: translateY(-7.5px) rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    max-width: calc(100vw - 50px);
+    background-color: #fff;
+
+    li:not(:last-of-type) {
+      margin-bottom: 40px;
+    }
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.Backdrop {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease;
+
+  &[isvisible="true"] {
+    visibility: visible;
+    opacity: 1;
+  }
+}

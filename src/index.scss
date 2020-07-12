@@ -1,0 +1,14 @@
+$mobile-md-width: 640px;
+$desktop-sm-width: 1140px;
+
+@mixin mobile-md {
+  @media (min-width: $mobile-md-width) {
+    @content;
+  }
+}
+
+@mixin desktop-sm {
+  @media (min-width: $desktop-sm-width) {
+    @content;
+  }
+}

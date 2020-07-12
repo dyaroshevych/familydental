@@ -1,0 +1,13 @@
+@import "../../index.scss";
+
+.Layout {
+  &_section {
+    width: 1140px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    @include desktop-sm {
+      padding: 50px 0;
+    }
+  }
+}

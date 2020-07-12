@@ -1,0 +1,32 @@
+@import "../../index.scss";
+
+.Button {
+  border: none;
+  border-radius: 5px;
+  color: #000;
+  font-weight: 700;
+  font-size: 16px;
+
+  &[data-size="sm"] {
+    padding: 10px 15px;
+
+    @include mobile-md {
+      padding: 10px 70px;
+    }
+  }
+
+  &[data-size="lg"] {
+    padding: 20px 25px;
+    text-transform: uppercase;
+  }
+
+  &[data-color="green"] {
+    background-color: #3dc2aa;
+    box-shadow: 0 2px 15px rgba(61, 194, 170, 0.8);
+  }
+
+  &[data-color="white"] {
+    background-color: #fff;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.25);
+  }
+}
