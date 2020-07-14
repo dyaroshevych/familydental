@@ -72,10 +72,6 @@ class Form extends Component {
   };
 
   render() {
-    const classes = ["Form"];
-
-    if (this.props.className) classes.push(this.props.className);
-
     return (
       <>
         {this.state.message.type && (
@@ -84,7 +80,7 @@ class Form extends Component {
             message={this.state.message.text}
           />
         )}
-        <form className={classes.join(" ")}>
+        <form className="Form">
           {Object.keys(this.state.fields).map((name) => (
             <div
               className="Form_field"

@@ -1,9 +1,11 @@
+@import "../../index.scss";
+
 .Form {
   display: flex;
   flex-wrap: wrap;
 
   &_field {
-    width: calc(50% - 3.5px);
+    width: 100%;
 
     &[data-type="textarea"] {
       width: 100%;
@@ -15,6 +17,10 @@
 
     &:nth-of-type(n + 3) {
       margin-top: 15px;
+    }
+
+    @include mobile-md {
+      width: calc(50% - 3.5px);
     }
   }
 

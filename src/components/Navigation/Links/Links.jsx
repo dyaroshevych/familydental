@@ -43,7 +43,7 @@ const Links = ({ className, click = () => {} }) => {
         </li>
       ))}
       <li className="Links_item">
-        <Link to="/appointment">
+        <Link to="/appointment" exact onClick={click}>
           <Button size="sm" color="green">
             Appointment
           </Button>
